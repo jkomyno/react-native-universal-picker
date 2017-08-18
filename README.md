@@ -1,6 +1,8 @@
 # react-native-universal-picker
 
 [![npm version](https://badge.fury.io/js/react-native-universal-picker.svg)](https://badge.fury.io/js/react-native-universal-picker)
+
+[![Build Status](https://travis-ci.org/jkomyno/react-native-universal-picker.svg?branch=master)](https://travis-ci.org/jkomyno/react-native-universal-picker)
 ---
 
 Cross platform component that uses React Native's Picker on Android and ActionSheetIOS on iOS.

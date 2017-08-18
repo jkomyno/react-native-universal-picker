@@ -3,13 +3,19 @@
   "version": "1.0.0",
   "description": "Cross platform component that uses React Native's Picker on Android and ActionSheetIOS on iOS.",
   "main": "src/index.js",
+  "types": "src/index.d.ts",
   "scripts": {
     "lint": "eslint src --fix",
     "test": "jest  --verbose --coverage"
   },
   "keywords": [],
-  "author": "Alberto Schiabel <alberto.schiabel@gmail.com> (https://github.com/jkomyno)",
+  "author": "Alberto Schiabel (https://github.com/jkomyno)",
   "license": "MIT",
+  "homepage": "https://github.com/jkomyno/react-native-universal-picker",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jkomyno/react-native-universal-picker"
+  },
   "devDependencies": {
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",
