@@ -1,0 +1,38 @@
+{
+  "name": "react-native-universal-picker",
+  "version": "1.0.0",
+  "description": "Cross platform component that uses React Native's Picker on Android and ActionSheetIOS on iOS.",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint src --fix",
+    "test": "jest  --verbose --coverage"
+  },
+  "keywords": [],
+  "author": "Alberto Schiabel <alberto.schiabel@gmail.com> (https://github.com/jkomyno)",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "7.2.3",
+    "babel-jest": "20.0.3",
+    "babel-preset-react-native": "2.1.0",
+    "eslint": "3.19.0",
+    "eslint-config-airbnb": "15.0.2",
+    "eslint-plugin-import": "2.6.1",
+    "eslint-plugin-jsx-a11y": "5.1.1",
+    "eslint-plugin-react": "7.1.0",
+    "jest": "20.0.4",
+    "prop-types": "15.5.10",
+    "react": "16.0.0-alpha.12",
+    "react-native": "0.46.0",
+    "react-test-renderer": "16.0.0-alpha.12"
+  },
+  "jest": {
+    "preset": "react-native",
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native)"
+    ],
+    "testPathIgnorePatterns": [
+      "node_modules"
+    ]
+  },
+  "nativePackage": false
+}
