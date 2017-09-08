@@ -1,3 +1,9 @@
+/**
+ * Type definitions for react-native-universal-picker
+ * Project: https://github.com/jkomyno/react-native-universal-picker
+ * Definitions by: Alberto Schiabel <https://github.com/jkomyno>
+ */
+
 declare module 'react-native-universal-picker' {
   import { PureComponent } from 'react';
   import { ViewPropTypes } from 'react-native';
@@ -19,6 +25,7 @@ declare module 'react-native-universal-picker' {
     /**
      * If set to false, the picker will be disabled, i.e. the user will not be able to make a
      * selection.
+     * 
      * @platform android
      */
     enabled?: boolean,
@@ -33,11 +40,13 @@ declare module 'react-native-universal-picker' {
     mode?: 'dialog' | 'dropdown',
     /**
      * Style to apply to each of the item labels.
+     * 
      * @platform ios
      */
     itemStyle?: any,
     /**
      * Prompt string for this picker, used on Android in dialog mode as the title of the dialog.
+     * 
      * @platform android
      */
     prompt?: string,
@@ -48,6 +57,7 @@ declare module 'react-native-universal-picker' {
     /**
      * The label of the latest ActionSheetIOS option button, which is the one that dismisses
      * the picker on iOS
+     * 
      * @platform ios
      */
     cancelLabel?: string,
