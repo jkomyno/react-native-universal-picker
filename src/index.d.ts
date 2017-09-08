@@ -1,8 +1,6 @@
 declare module 'react-native-universal-picker' {
-  import {
-    PureComponent,
-    ViewPropTypes,
-  } from 'react';
+  import { PureComponent } from 'react';
+  import { ViewPropTypes } from 'react-native';
   
   // adapted from here:
   // https://github.com/facebook/react-native/blob/master/Libraries/Components/Picker/Picker.js
@@ -55,7 +53,5 @@ declare module 'react-native-universal-picker' {
     cancelLabel?: string,
   }
 
-  declare class UniversalPicker extends PureComponent<UniversalPickerProps> {}
-
-  export default UniversalPicker;
+  export default class UniversalPicker extends PureComponent<UniversalPickerProps, null> {}
 }
