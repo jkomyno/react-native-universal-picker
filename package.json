@@ -1,6 +1,6 @@
 {
   "name": "react-native-universal-picker",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Cross platform component that uses React Native's Picker on Android and ActionSheetIOS on iOS.",
   "main": "src/index.js",
   "types": "src/index.d.ts",
