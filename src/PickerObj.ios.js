@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import {
   TouchableOpacity,
   Text,
-  StyleSheet,
   ActionSheetIOS,
   ViewPropTypes,
+  TextStylePropTypes,
 } from 'react-native';
 import { getPropArrFromChildren } from './utils';
 
@@ -14,17 +14,15 @@ export default class PickerObj extends PureComponent {
     children: PropTypes.node.isRequired,
     onValueChange: PropTypes.func,
     cancelLabel: PropTypes.string,
-    style: ViewPropTypes.style,
-    itemStyle: PropTypes.object,
+    style: ViewPropTypes ? ViewPropTypes.style : PropTypes.object,
+    itemStyle: TextStylePropTypes || PropTypes.object,
     selectedValue: PropTypes.any,
   };
 
   static defaultProps = {
     cancelLabel: 'Cancel',
     style: {},
-    itemStyle: {
-      fontSize: 12,
-    },
+    itemStyle: {},
     onValueChange: () => {},
   };
 
@@ -33,6 +31,17 @@ export default class PickerObj extends PureComponent {
     const { children } = props;
     const labels = getPropArrFromChildren(children, 'label');
     const values = getPropArrFromChildren(children, 'value');
+
+    const defaultStyle = {
+      height: '100%',
+    };
+    const defaultItemStyle = {
+      fontSize: 18,
+      color: '#007AFF',
+    };
+
+    this.style = Object.assign({}, defaultStyle, props.style);
+    this.itemStyle = Object.assign({}, defaultItemStyle, props.itemStyle);
 
     this.state = {
       labels,
@@ -75,33 +84,22 @@ export default class PickerObj extends PureComponent {
   }
 
   render() {
-    const {
-      selectedValue,
-      style,
-      itemStyle,
-    } = this.props;
+    const { selectedValue } = this.props;
     const {
       labels,
       values,
     } = this.state;
 
-    const flatStyle = StyleSheet.flatten(style);
-
     return (
       <TouchableOpacity
         onPress={this.handlePress}
-        style={[{
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          flexDirection: 'row',
-          paddingHorizontal: 5,
-        }, flatStyle]}
+        style={this.style}
       >
-        <Text style={itemStyle}>
+        <Text
+          numberOfLines={1}
+          style={this.itemStyle}
+        >
           {labels[values.indexOf(selectedValue)]}
-        </Text>
-        <Text style={itemStyle}>
-          ▼
         </Text>
       </TouchableOpacity>
     );
