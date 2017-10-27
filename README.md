@@ -67,10 +67,6 @@ Prop              | Type     | Default  | Description
 ----------------- | -------- | -------- | --------------------
 cancelLabel       | string   | 'Cancel' | The label of the latest ActionSheetIOS option button, which is the one that dismisses the picker on iOS
 
-## Issues
-
-At the moment it's been manually tested only on Android.
-
 ## Contributing
 
 PRs are obviously welcome! :octocat:
