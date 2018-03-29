@@ -17,6 +17,8 @@
     "url": "https://github.com/jkomyno/react-native-universal-picker"
   },
   "devDependencies": {
+    "@types/react": "^16.1.0",
+    "@types/react-native": "^0.52.20",
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",
     "babel-preset-react-native": "2.1.0",
