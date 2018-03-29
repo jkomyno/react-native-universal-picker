@@ -5,13 +5,13 @@
  */
 
 declare module 'react-native-universal-picker' {
-  import { PureComponent } from 'react';
-  import { ViewPropTypes } from 'react-native';
+  import { ComponentClass, PureComponent } from 'react';
+  import { ViewStyle } from 'react-native';
   
   // adapted from here:
   // https://github.com/facebook/react-native/blob/master/Libraries/Components/Picker/Picker.js
   export interface UniversalPickerProps {
-    style?: ViewPropTypes.style,
+    style?: ViewStyle,
     /**
      * Value matching value of one of the items. Can be a string or an integer.
      */
@@ -63,5 +63,12 @@ declare module 'react-native-universal-picker' {
     cancelLabel?: string,
   }
 
-  export default class UniversalPicker extends PureComponent<UniversalPickerProps, null> {}
+  export interface PickerItem {
+    label: string,
+    value: any
+  }
+
+  export default class UniversalPicker extends PureComponent<UniversalPickerProps, {}> {
+    public static Item: ComponentClass<PickerItem>
+  }
 }
